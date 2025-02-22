@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const PORT = 5005;
 const cohorts = require("./cohorts.json");
+const students = require("./students.json");
 
 
 // STATIC DATA
@@ -32,9 +33,13 @@ app.get("/docs", (req, res) => {
   res.sendFile(__dirname + "/views/docs.html");
 });
 
-app.get("/api/cohorts", (req,res) => {
+app.get("/api/cohorts", (req, res) => {
   res.json(cohorts);
 });
+
+app.get("/api/students", (req, res) => {
+  res.json(students);
+})
 
 
 // START SERVER
