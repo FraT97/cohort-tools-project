@@ -2,12 +2,13 @@ const mongoose = require("mongoose");
 const Schema= mongoose.Schema;  
 
 const studentsSchema = new Schema({
-    firstName: {type: String},
-    LastName: {type: String},
-    email: {type: String},
-    phone: {type: String},
-    linkedinUrl: {type: String},
-    languages: {type: [String]},
+    
+    firstName: {type: String, reqired:true},
+    lastName: {type: String, required:true},
+    email: {type: String, required:true},
+    phone: {type: String, required:true},
+    linkedinUrl: {type: String, required:true},
+    languages: {type: [String], default: []},
     program: {type: String},
     background: {type: String},
     image: {type: String},
