@@ -25,10 +25,12 @@ app.use(cookieParser());
 const authRoute = require('./routes/auth.route.js');
 const studentRoute = require('./routes/students.route.js');
 const cohortRoute = require('./routes/cohorts.route.js');
+const userRoute = require('./routes/users.route.js');
 
 app.use('/auth', authRoute);
 app.use('/api/students', studentRoute); 
-app.use('/api/cohorts', cohortRoute); 
+app.use('/api/cohorts', cohortRoute);
+app.use('/api/users', userRoute);
 
 
 app.listen(PORT, () => {
